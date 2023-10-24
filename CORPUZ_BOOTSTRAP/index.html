@@ -1,108 +1,618 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
     <title>My Grand Motel</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <link href="./style.css" rel="stylesheet" />
   </head>
 
-  <body class='container'>
-    <!-- <div class='row border border-dark'>
-      <div class='col border border-dark'>Services</div>
-      <div class='col border border-dark'>Fees</div>
-      <div class='col border border-dark'>Description</div>
-    </div>
-    header -->
+  <body class="container">
     <header>
-      <!-- Nav tabs -->
-      <!-- <ul class="nav nav-tabs" id="navId">
-        <li class="nav-item">
-          <a href="#tab1Id" class="nav-link active">Active</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-            aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#tab2Id">Action</a>
-            <a class="dropdown-item" href="#tab3Id">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#tab4Id">Action</a>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">The Royal Mansion Motel</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Room
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Luxury Suite</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Double Bedroom Accomodation</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success ml-2" type="submit">
+                Search
+              </button>
+            </form>
+
+            <button type="button" class="btn btn-primary mx-1 btn-dark" data-bs-toggle="modal" data-bs-target="#signUp">
+              Sign Up
+            </button>
+            <!-- Sign Up Modal -->
+            <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="signUpLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="signUpLabel">
+                      Create an account
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-5">
+                    <form class="mx-1 mx-md-1">
+                      <div class="row">
+                        <div class="row">
+                          <h2>Personal Information</h2>
+                          <hr />
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="row my-1">
+                              <div class="col-md-3">
+                                <label for="inputFirstName" class="col-form-label">First Name :</label>
+                              </div>
+                              <div class="col-md-9">
+                                <input type="text" id="inputFirstName" class="form-control form-control-sm" />
+                              </div>
+                            </div>
+
+                            <div class="row my-1">
+                              <div class="col-md-3">
+                                <label for="inputBirthdate" class="col-form-label">Birthdate :</label>
+                              </div>
+                              <div class="col-md-9">
+                                <input type="date" id="inputBirthdate" class="form-control form-control-sm" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="row my-1">
+                              <div class="col-md-3">
+                                <label for="inputLastName" class="col-form-label">Last Name :</label>
+                              </div>
+                              <div class="col-md-9">
+                                <input type="text" id="inputLastName" class="form-control form-control-sm" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mt-2">
+                        <div class="row">
+                          <h2>Account Information</h2>
+                          <hr />
+                        </div>
+                        <div class="row">
+                          <div class="row mb-2 col-md-6">
+                            <div class="col-md-2">
+                              <label for="inputUsername" class="col-form-label">Username</label>
+                            </div>
+                            <div class="col-md-12">
+                              <input type="text" id="inputUsername" class="form-control form-control-sm" />
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="row">
+                                <div class="col-md-2">
+                                  <label for="inputPassword" class="col-form-label">Password</label>
+                                </div>
+                                <div class="col-md-12">
+                                  <input type="password" id="inputPassword" class="form-control form-control-sm"
+                                    aria-describedby="passwordHelpInline" />
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2"></div>
+                                  <div class="col-md-10">
+                                    <span id="passwordHelpInline" class="form-text">
+                                      Must be 8-20 characters long.
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <label for="inputPassword2">New Password</label>
+                                </div>
+                                <div class="col-md-12">
+                                  <input type="password" id="inputPassword2" class="form-control form-control-sm"
+                                    aria-describedby="passwordHelpInline" />
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4"></div>
+                                  <div class="col-md-8">
+                                    <span id="passwordHelpInline" class="form-text">
+                                      Must be 8-20 characters long.
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="row mx-auto align-items-center mb-2 w-100">
+                          <div class="row m-0 mt-2 bg-dark-subtle rounded-3 p-2">
+                            <div style="text-align: justify; font-style: italic">
+                              By signing this consent form, I/we (as “Data
+                              Subject”) grant my/our free, voluntary and
+                              unconditional consent to the collection and
+                              processing of all Personal Data (as defined
+                              below), and account or transaction information or
+                              records (collectively, the "Information") relating
+                              to me/us disclosed/transmitted by me/us in person
+                              or by my/our authorized agent/representative/s to
+                              the information database system of the Development
+                              System and/or any of its authorized agent/s or
+                              representative/s as Information controller, by
+                              whatever means in accordance with Republic Act
+                              (R.A.) 10173, otherwise known as the “Data Privacy
+                              Act of 2012” of the Republic of the Philippines,
+                              including its Implementing Rules and Regulations
+                              (IRR) as well as all other guidelines and
+                              issuances by the National Privacy Commission
+                              (NPC).
+                            </div>
+                          </div>
+                          <div class="row m-0 mt-2 p-2 bg-dark-subtle rounded-3">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="formAgreement" />
+                              &nbsp; &nbsp;
+                              <label class="form-check-label" for="formAgreement">
+                                I agree all statements in
+                                <a href="#!">Terms of service</a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-center mx-4">
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">
+                          Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg">
+                          Sign Up
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-target="#signInModal" data-bs-toggle="modal">
+              Login
+            </button>
+            <!-- Sign Up Modal -->
+            <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="signInModalLabel">
+                      Create an account
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-5">
+                    <form class="mx-1 mx-md-1">
+                      <div class="row">
+                        <div class="row">
+                          <h2>Personal Information</h2>
+                          <hr />
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="row my-1">
+                              <div class="col-md-3">
+                                <label for="inputFirstName" class="col-form-label">First Name :</label>
+                              </div>
+                              <div class="col-md-9">
+                                <input type="text" id="inputFirstName" class="form-control form-control-sm" />
+                              </div>
+                            </div>
+
+                            <div class="row my-1">
+                              <div class="col-md-3">
+                                <label for="inputBirthdate" class="col-form-label">Birthdate :</label>
+                              </div>
+                              <div class="col-md-9">
+                                <input type="date" id="inputBirthdate" class="form-control form-control-sm" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="row my-1">
+                              <div class="col-md-3">
+                                <label for="inputLastName" class="col-form-label">Last Name :</label>
+                              </div>
+                              <div class="col-md-9">
+                                <input type="text" id="inputLastName" class="form-control form-control-sm" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mt-2">
+                        <div class="row">
+                          <h2>Account Information</h2>
+                          <hr />
+                        </div>
+                        <div class="row">
+                          <div class="row mb-2 col-md-6">
+                            <div class="col-md-2">
+                              <label for="inputUsername" class="col-form-label">Username</label>
+                            </div>
+                            <div class="col-md-12">
+                              <input type="text" id="inputUsername" class="form-control form-control-sm" />
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="row">
+                                <div class="col-md-2">
+                                  <label for="inputPassword" class="col-form-label">Password</label>
+                                </div>
+                                <div class="col-md-12">
+                                  <input type="password" id="inputPassword" class="form-control form-control-sm"
+                                    aria-describedby="passwordHelpInline" />
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-2"></div>
+                                  <div class="col-md-10">
+                                    <span id="passwordHelpInline" class="form-text">
+                                      Must be 8-20 characters long.
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-6">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <label for="inputPassword2">New Password</label>
+                                </div>
+                                <div class="col-md-12">
+                                  <input type="password" id="inputPassword2" class="form-control form-control-sm"
+                                    aria-describedby="passwordHelpInline" />
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4"></div>
+                                  <div class="col-md-8">
+                                    <span id="passwordHelpInline" class="form-text">
+                                      Must be 8-20 characters long.
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="row mx-auto align-items-center mb-2 w-100">
+                          <div class="row m-0 mt-2 bg-dark-subtle rounded-3 p-2">
+                            <div style="text-align: justify; font-style: italic">
+                              By signing this consent form, I/we (as “Data
+                              Subject”) grant my/our free, voluntary and
+                              unconditional consent to the collection and
+                              processing of all Personal Data (as defined
+                              below), and account or transaction information or
+                              records (collectively, the "Information") relating
+                              to me/us disclosed/transmitted by me/us in person
+                              or by my/our authorized agent/representative/s to
+                              the information database system of the Development
+                              System and/or any of its authorized agent/s or
+                              representative/s as Information controller, by
+                              whatever means in accordance with Republic Act
+                              (R.A.) 10173, otherwise known as the “Data Privacy
+                              Act of 2012” of the Republic of the Philippines,
+                              including its Implementing Rules and Regulations
+                              (IRR) as well as all other guidelines and
+                              issuances by the National Privacy Commission
+                              (NPC).
+                            </div>
+                          </div>
+                          <div class="row m-0 mt-2 p-2 bg-dark-subtle rounded-3">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="formAgreement" />
+                              &nbsp; &nbsp;
+                              <label class="form-check-label" for="formAgreement">
+                                I agree all statements in
+                                <a href="#!">Terms of service</a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-center mx-4">
+                        <button type="button" class="btn btn-secondary btn-lg" data-bs-dismiss="modal">
+                          Cancel
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg">
+                          Sign Up
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </li>
-        <li class="nav-item">
-          <a href="#tab5Id" class="nav-link">Another link</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-
-    Tab panes 
-      <div class="tab-content">
-        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-      </div>
-
-      <script>
-        $('#navId a').click(e => {
-          e.preventDefault();
-          $(this).tab('show');
-        });
-      </script> -->
+        </div>
+      </nav>
     </header>
 
-    <main class='container-md'>
-      <h1>The Royal Grand Motel</h1>
-      <div class="card-group ">
+    <main class="container-md">
+      <!-- Hero Section -->
+      <section>
+        <div class="container-md">
+          <div id="carouselExampleCaptions" class="carousel slide ">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ">
+              <div class="carousel-item active">
+                <img src="./images/_mountain.jpg" class="d-block w-100" alt="..." loading='lazy' />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Discover Tranquility at Lake Hilot</h5>
+                  <p>
+                    Nestled near the Motel Venue lies a hidden gem, Lake Hilot -
+                    a serene oasis waiting to be explored. Surrounded by lush
+                    greenery and embraced by the calm embrace of nature, this
+                    picturesque lake offers a retreat from the hustle and bustle
+                    of city life. Immerse yourself in the soothing ambiance,
+                    take leisurely strolls along the shore, and breathe in the
+                    fresh, crisp air. Lake Hilot isn't just a destination; it's
+                    an experience, inviting you to unwind and reconnect with the
+                    beauty of the natural world.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./images/_car.jpg" class="d-block w-100" alt="..." loading='lazy' />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Explore in Style: Audi Car</h5>
+                  <p>
+                    To enhance your city exploration, we offer the epitome of
+                    luxury and style - Audi cars. Glide through the city streets
+                    in sophistication and comfort, making every journey a
+                    memorable one.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./images/_motor.jpg" class="d-block w-100" alt="..." loading='lazy' />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Explore in Style: Motorcycle</h5>
+                  <p>
+                    For the adventurous souls, we also provide top-notch
+                    motorcycles available for rent. Feel the wind in your hair
+                    as you navigate the city's scenic routes, experiencing the
+                    freedom and thrill of the open road. Whether you prefer the
+                    elegance of an Audi or the exhilaration of a motorcycle, we
+                    have the perfect ride for your urban adventures.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <div class="card-group">
         <div class="card">
-          <img class="card-img-top p-3" height='500' src="./images/_beach.jpg" alt="Beach in motel">
+          <img class="card-img-top p-3 rounded-5" height="250" src="./images/_beach.jpg" alt="Beach in motel" />
           <div class="card-body">
             <h4 class="card-title">Beach</h4>
-            <p class="card-text">Just like the ocean waves, life doesn’t stop for anyone. But every time you feel lost
-              in the vastness, remember that the same sea that can be tumultuous and deep also brings tranquility and
-              beauty. Embrace the ebb and flow, for it’s all part of the journey.</p>
+            <p class="card-text">
+              Just like the ocean waves, life doesn’t stop for anyone. But every
+              time you feel lost in the vastness, remember that the same sea
+              that can be tumultuous and deep also brings tranquility and
+              beauty. Embrace the ebb and flow, for it’s all part of the
+              journey.
+            </p>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top p-3" height='500' src="./images/_parking.jpg" alt="parking lot">
+          <img class="card-img-top p-3 rounded-5" height="250" src="./images/_parking.jpg" alt="parking lot" />
           <div class="card-body">
             <h4 class="card-title">Parking Lot</h4>
-            <p class="card-text">A parking lot is more than just space. It’s where journeys pause, stories unfold, and
-              dreams park themselves until they’re ready to hit the road again.</p>
+            <p class="card-text">
+              A parking lot is more than just space. It’s where journeys pause,
+              stories unfold, and dreams park themselves until they’re ready to
+              hit the road again.
+            </p>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top p-3" height='500' src="./images/_road.jpg" alt="Road on the Motel">
+          <img class="card-img-top p-3 rounded-5" height="250" src="./images/_road.jpg" alt="Road on the Motel" />
           <div class="card-body">
             <h4 class="card-title">Front</h4>
-            <p class="card-text">The first view of a place sets the tone for the entire experience. It’s like the cover
-              of a book, inviting you to discover the stories within.</p>
+            <p class="card-text">
+              The first view of a place sets the tone for the entire experience.
+              It’s like the cover of a book, inviting you to discover the
+              stories within.
+            </p>
           </div>
         </div>
       </div>
 
+      <div class="row mt-5">
+        <div class='col-md-8'>
+          <h3 class="second">Service Fees</h3>
+          <table border="2" id="data-tables">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Fees</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Room Service</td>
+                <td>500.00</td>
+                <td>Inclusive Massage and meals</td>
+              </tr>
+              <tr>
+                <td>Bamboo Bliss</td>
+                <td> P3,180 (2 hours)</td>
+                <td>Activated bamboo charcoal and volcanic sand scrub rich in mineral content nourishes the skin while
+                  absorbing impurities and toxins from the skin’s pores. It is highly effective in providing deep
+                  purification of the skin. This body treatment is finished with a deep tissue massage. This package is
+                  done in a private room with an ensuite steam and rainshower.</td>
+              </tr>
+              <tr>
+                <td>Luxury Bath and Jacuzzi</td>
+                <td> P1500.00 per couple (10 hours + full course meal)</td>
+                <td>Inclusive all around facial and massage</td>
+              </tr>
+              <tr>
+                <td>The Yin Yang Experience</td>
+                <td> P7,880 per couple (2 hours + meal)</td>
+                <td>Use of our ‘yin yang’ soaking pools and shower for 45 minutes followed by a 75 minute massage
+                  (choice of Silk or Deep Tissue in a couple's room or Qiharmony on recliners in an open-air area by the
+                  pools overlooking the lake). 3 course 'Yin Yang' set meal at the dining hall. This may be served
+                  before or after the soak and massage from 11:00 am onwards. Last call for food and beverage orders is
+                  at 7:30 pm.
+                </td>
+              </tr>
+              <tr>
+                <td>The Bathhouse Experience </td>
+                <td>P5,160 per couple (2 hours) </td>
+                <td>Use of our ‘yin yang’ soaking pools and shower for 45 minutes followed by a 75 minute massage
+                  (choice of Silk or Deep Tissue in a couple's room or Qiharmony on recliners in an open-air area by the
+                  pools overlooking the lake).</td>
+              </tr>
+            </tbody>
+          </table>
+          <div aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
 
+        <div class='col-md-4'>
+          <h3>Visitor by year</h3>
+          <label for='progress_label_1' class='font-weight-bold'>2015</label>
+          <div id='progress_label_1' class="progress mt-1" role="progressbar" aria-label="Default striped example"
+            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped" style="width: 20%">20%</div>
+          </div>
+          <label for='progress_label_2' class='font-weight-bold'>2016</label>
+          <div id='progress_label_2' class="progress mt-1" role="progressbar" aria-label="Warning striped example"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped bg-warning" style="width: 65%">65%</div>
+          </div>
+          <label for='progress_label_3' class='font-weight-bold'>2017</label>
+          <div id='progress_label_3' class="progress mt-1" role="progressbar" aria-label="Success striped example"
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped bg-success" style="width: 35%">35%</div>
+          </div>
+          <label for='progress_label_4' class='font-weight-bold'>2018</label>
+          <div id='progress_label_4' class="progress mt-1" role="progressbar" aria-label="Info striped example"
+            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped bg-info" style="width: 48%">48%</div>
+          </div>
+          <label for='progress_label_5' class='font-weight-bold'>2019</label>
+          <div id='progress_label_5' class="progress mt-1" role="progressbar" aria-label="Danger striped example"
+            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped bg-danger" style="width: 55%">55%</div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class='container-fluid'>
+    <footer class="container-fluid"></footer>
 
-    </footer>
     <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"></script>
   </body>
 
