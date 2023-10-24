@@ -2,14 +2,233 @@
 
   <head>
     <title>The Grand Motel</title>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        margin: auto 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+      }
+
+      ul {
+        list-style-type: none;
+        background-color: black;
+        padding-left: 1rem;
+        margin: 0 auto;
+
+      }
+
+      li {
+        display: inline-block;
+        border: 1px black solid;
+        padding: 1rem;
+        width: 8rem;
+        text-align: center;
+      }
+
+      li:hover {
+        background-color: dodgerblue;
+        border-radius: 1rem;
+      }
+
+      figure {
+        padding: 4px;
+        margin: auto;
+        text-align: center;
+
+      }
+
+      figcaption {
+        background-color: black;
+        color: white;
+        font-style: italic;
+        padding: 5px;
+        text-align: center;
+        margin: 1rem auto;
+        border-radius: 0.2rem;
+        white-space: nowrap;
+
+      }
+
+      figure img {
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+      }
+
+      figure h3 {
+        margin-top: 2rem;
+      }
+
+      .first {
+        margin-bottom: 3rem;
+        border-radius: 1rem;
+        border: solid 1px fuchsia;
+        text-align: left;
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+
+      .second {
+        margin: 1rem auto 1rem auto;
+        border-radius: 1rem;
+        border: solid 2px dodgerblue;
+        background-color: aliceblue;
+        text-align: left;
+        padding: 1rem;
+        width: auto;
+      }
+
+      .img-container {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .img-container div {
+        display: inline-block;
+        width: 33%;
+      }
+
+      #data-tables {
+        border-collapse: collapse;
+        width: 100%;
+        border-radius: 1rem;
+      }
+
+      #data-tables td,
+      #data-tables th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #data-tables tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #data-tables tr:hover {
+        background-color: #ddd;
+      }
+
+      #data-tables th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #045e70;
+        color: white;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="../style.css"> -->
   </head>
 
   <body>
-    <h1>Services</h1>
-    <h2>Room Services</h2>
-    <p>We offer best and royal quality service.</p>
-    <h2>Best of the bes Spa n' Wellness</h2>
-    <p>Just call n' text. All services are available.</p>
+    <ul>
+      <li><a href=''>Home</a></li>
+      <li><a href=''>Contact Us</a></li>
+      <li><a href=''>About Us</a></li>
+      <li><a href=''>Login</a></li>
+    </ul>
+    <h1 class='first'>Motel View</h1>
+    <div class='img-container'>
+      <div>
+        <figure class="figure">
+          <img src="../images/_beach.jpg" class="figure-img img-fluid rounded" alt="..."
+            title='Beacg infront of the The Grand Royal' width='300' height='300' loading='lazy'>
+          <h3>
+            <strong>
+              Beach Front
+            </strong>
+          </h3>
+          <figcaption class="figure-caption">A beach at view deck of the Motel.</figcaption>
+        </figure>
+      </div>
+      <div>
+
+        <figure class="figure">
+          <img src="../images/_parking.jpg" class="figure-img img-fluid rounded" alt="..."
+            title='Beacg infront of the The Grand Royal' width='300' height='300' loading='lazy'>
+          <h3>
+            <strong>
+              Parking lot
+            </strong>
+          </h3>
+          <figcaption class="figure-caption">A parking for all the vehicles.</figcaption>
+        </figure>
+      </div>
+      <div>
+
+        <figure class="figure">
+          <img src="../images/_road.jpg" class="figure-img img-fluid rounded" alt="..."
+            title='Beacg infront of the The Grand Royal' width='300' height='300' loading='lazy'>
+          <h3>
+            <strong>
+              Front View
+            </strong>
+          </h3>
+          <figcaption class="figure-caption">The road in front of the Motel.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <h1 class='second'>Service Fees</h1>
+    <table border='2' id='data-tables'>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Fees</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Room Service</td>
+          <td>500.00</td>
+          <td>Inclusive Massage and meals</td>
+        </tr>
+        <tr>
+          <td>Special Spa and Wellness</td>
+          <td>1500.00</td>
+          <td>Inclusive all around facial and massage</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Room Services &nbsp;</h2>
+    <p>
+      We offer best and <br />
+      <strong>royal quality service.</strong>
+    </p>
+    <hr />
+    <blockquote cite='https://www.birtannica.com/topic.html'>
+      Inns have existed since very ancient times to serve merchants and other travelers. In the Roman Empire hostelries
+      called mansions were stituated along the Roman road system to accomodate travelers on government or commercial
+      business.
+    </blockquote>
+
+    <p> The <abbr title='The Grand Motel'>TGM</abbr> was built in the year 1969.</p>
+    <br />
+    <address>
+      69 Street Corner Tree lane<br />
+      The Grand Motel<br />
+      Email: info@grandmotel.com<br />
+    </address>
+    <h2>Best of the best Spa n' Wellness</h2>
+    <p>
+      Just call n' text. <strong>We reach heaven in here.</strong>
+      <em>All services are available.</em>
+    </p>
+
+
   </body>
 
 </html>
