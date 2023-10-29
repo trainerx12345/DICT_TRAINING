@@ -3,10 +3,10 @@
   // Pie Chart Data
   var pieChartCanvas = document.getElementById('pieChart').getContext('2d');
   var pieChartData = {
-    labels: ['March', 'April', 'May', 'June', 'July', 'August'],
+    labels: ['March', 'April', 'May', 'June', 'July'],
     datasets: [{
-      data: [70, 30, 45, 20, 50, 80],
-      backgroundColor: ['#FF5733', '#76659b', '#900C3F', '#458c82', '#cac34b', '#d4948a']
+      data: [70, 30, 45, 20, 50],
+      backgroundColor: ['#FF5733', '#76659b', '#900C3F', '#458c82', '#cac34b']
     }]
   };
   new Chart(pieChartCanvas, {
@@ -17,10 +17,10 @@
   // Line Chart Data
   var lineChartCanvas = document.getElementById('lineChart').getContext('2d');
   var lineChartData = {
-    labels: ['March', 'April', 'May', 'June', 'July', 'August'],
+    labels: ['March', 'April', 'May', 'June', 'July'],
     datasets: [{
-      label: 'Progress for the months of March to August',
-      data: [70, 30, 45, 20, 50, 80],
+      label: 'Progress for the months of March to July',
+      data: [70, 30, 45, 20, 50],
       borderColor: '#007BFF',
       fill: false
     }]

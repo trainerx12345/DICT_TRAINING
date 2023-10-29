@@ -1,35 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  // Pie Chart Data
-  var pieChartCanvas = document.getElementById('pieChart').getContext('2d');
-  var pieChartData = {
-    labels: ['March', 'April', 'May', 'June', 'July', 'August'],
-    datasets: [{
-      data: [70, 30, 45, 20, 50, 80],
-      backgroundColor: ['#FF5733', '#76659b', '#900C3F', '#458c82', '#cac34b', '#d4948a']
-    }]
-  };
-  new Chart(pieChartCanvas, {
-    type: 'pie',
-    data: pieChartData
-  });
-
-  // Line Chart Data
-  var lineChartCanvas = document.getElementById('lineChart').getContext('2d');
-  var lineChartData = {
-    labels: ['March', 'April', 'May', 'June', 'July', 'August'],
-    datasets: [{
-      label: 'Progress for the months of March to August',
-      data: [70, 30, 45, 20, 50, 80],
-      borderColor: '#007BFF',
-      fill: false
-    }]
-  };
-  new Chart(lineChartCanvas, {
-    type: 'line',
-    data: lineChartData
-  });
-</script>
 <!-- Bootstrap JavaScript Libraries -->
 <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
   integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
@@ -43,5 +11,6 @@
   integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <!-- Core theme JS-->
 <script src="assets/js/scripts.js"></script>
+
 
 </html>
