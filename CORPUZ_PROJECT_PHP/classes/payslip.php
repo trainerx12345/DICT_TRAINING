@@ -1,5 +1,5 @@
 <?php 
-class Deduction{
+class Payslip{
   private $conn;
   public $payslip_id;
   public $payroll_id;
@@ -72,6 +72,60 @@ class Deduction{
       $this->net=$row['net'];
       
   }
+  public function update(){
+    $query = "UPDATE payslip_list SET
+          days_present=?
+          ,days_absent=?
+          ,tardy_undertime=?
+          ,total_allowance=?
+          ,total_deduction=?
+          ,base_salary=?
+          ,withholding_tax=?
+          ,net=?
+    WHERE id = ?";
+    $stmt = $this->conn->prepare($query);
+
+    $stmt->bindParam(1, $this->days_present);
+    $stmt->bindParam(2, $this->days_absent);  
+    $stmt->bindParam(3, $this->tardy_undertime);
+    $stmt->bindParam(4, $this->total_allowance);
+    $stmt->bindParam(5, $this->total_deduction);
+    $stmt->bindParam(6, $this->base_salary);
+    $stmt->bindParam(7, $this->withholding_tax);
+    $stmt->bindParam(8, $this->net);
+    $stmt->bindParam(9, $this->payslip_id);
+
+    if($stmt->execute()){
+      echo "
+      <script>
+        alert('Record Update Successfully!');
+        window.location.href='/pages/dashboard.php';
+      </script>"; 
+    }else{
+      echo "
+      <script>
+        alert('Invalid Input');
+      </script>"; 
+    }
+}
+public function search($keyword) {
+
+  $query = "SELECT * FROM payslip_list WHERE 
+  days_present LIKE :keyword 
+  OR days_absent LIKE :keyword
+  OR tardy_undertime LIKE :keyword
+  OR total_allowance LIKE :keyword
+  OR total_deduction LIKE :keyword
+  OR base_salary LIKE :keyword
+  OR withholding_tax LIKE :keyword
+  OR net LIKE :keyword
+  ";
+  $stmt = $this->conn->prepare($query);
+  $keyword = "%" . $keyword . "%";
+  $stmt->bindParam(':keyword', $keyword, PDO::PARAM_STR);
+  $stmt->execute();
+  return $stmt;
+}
   
   public function delete(){
     $query = "DELETE FROM payslip_list WHERE id = ?";

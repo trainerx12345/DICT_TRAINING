@@ -14,9 +14,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="#employee">Employees</a></li>
           <li class="nav-item"><a class="nav-link" href="#payroll">Payroll</a></li>
-          <li class="nav-item"><a class="nav-link" href="#payslip">Payslip</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#payslip">Payslip</a></li>
           <li class="nav-item"><a class="nav-link" href="#deduction">Deductions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#allowance">Allowances</a></li>
+          <li class="nav-item"><a class="nav-link" href="#allowance">Allowances</a></li> -->
           <li class="nav-item"><a class="nav-link" href="#department">Departments</a></li>
           <li class="nav-item"><a class="nav-link" href="#position">Positions</a></li>
         </ul>
@@ -28,8 +28,20 @@
   </nav>
 
 
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <?php 
+  include './view_departments.php';
+  include './view_positions.php';
+  include './view_employees.php';
 
-  <?php include './view_departments.php';?>
+  include './view_payrolls.php';
+
+  
+  // include './view_payslips.php';
+  // include './view_allowances.php';
+  // include './view_deductions.php';
+  ?>
 
 </body>
 <?php 

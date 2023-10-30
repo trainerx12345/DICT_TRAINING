@@ -1,5 +1,5 @@
 <?php 
-   include '../config/database.php';
+
    include '../classes/departments.php';
 
    $db = new Database();
@@ -137,26 +137,6 @@
     </div>
   </div>
 </section>
-
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-<script>
-  $(document).ready(function () {
-    $('#tables-departments').DataTable({
-      "pagingType": "full_numbers",
-      "lengthMenu": [
-        [10, 25, 50, -1],
-        [10, 25, 50, "All"]
-      ],
-      responsive: true,
-      language: {
-        search: "_INPUT_",
-        searchPlaceholder: "Search Your Data",
-      }
-    });
-  });
-</script>
 
 
 <script>
